@@ -12,8 +12,8 @@ axios
 
 
 function search(response){ 
-  result.innerHTML = response
-  .map(function charac {
+    result.innerHTML = response
+    .map(function characterInfo() { // ooga booga, make theis a function 
       return `
         <img src="${results.image}">
         <h1> Name: ${results.name}</h1>
