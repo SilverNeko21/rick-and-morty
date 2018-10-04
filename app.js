@@ -1,6 +1,8 @@
-document.getElementById("button").addEventListener("click", search);
-const result = document.querySelector('#result').innerHTML;
+document.getElementById("button").addEventListener("click", click);
+const result = document.querySelector('#result');
 
+
+function click(){
 axios
   .get('https://rickandmortyapi.com/api/character/')
   .then(response => {
@@ -9,14 +11,15 @@ axios
   .catch(error => {
     console.log('error', error);
   });
-
+}
 
 function search(response){ 
-    result.innerHTML = response
-    .map(function characterInfo() { // ooga booga, make theis a function 
+  console.log('response', response);
+    result.innerHTML = response.data.results
+    .map(function(response) { // ooga booga, make theis a function 
       return `
-        <img src="${results.image}">
-        <h1> Name: ${results.name}</h1>
+        <img src="${response.image}">
+        <h1> Name: ${response.name}</h1>
       `;
     })
     .join('');
