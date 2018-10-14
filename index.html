@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
     <title>Rick and Morty</title>
 </head>
 
 <body>
-    <button id="button">Get Character Data</button>
-    <input type="text" id="search">
-    <div id="result"></div>
+
+    <div id="root">
+        <div id="searchpage">
+            <div id="titleimage">
+                <img src="images/rick-morty.png" alt="Rick And Morty">
+                <img src="images/API.png" alt="API">
+            </div>
+            <input type="text" id="search" placeholder="Rick Sanchez">
+
+            <div id="button">
+
+            </div>
+        </div>
+
+        <div id="result">
+
+        </div>
+        <img src="images/pickle.gif" alt="OOGA BOOGA CHA" id='exit' onclick='ShowSearch()' />
+    </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 <script src="app.js"></script>
